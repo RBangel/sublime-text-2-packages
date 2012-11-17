@@ -6,6 +6,11 @@
     "name": "comment.block.autosys",
     "match": "/\\*.*\\*/\\s?$\\n?",
     "comment": "Comment block"
+  },
+  {
+    "name": "variable.other.environment.autosys",
+    "match": "\\$[A-Za-z][A-Za-z0-9_]+",
+    "comment": "Environment Variable"
   }
   ],
   "uuid": "4cd28efc-83c1-4a3e-b9ab-5bbda5eaa863"

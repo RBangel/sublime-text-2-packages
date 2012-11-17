@@ -18,6 +18,14 @@
 			<key>name</key>
 			<string>comment.block.autosys</string>
 		</dict>
+		<dict>
+			<key>comment</key>
+			<string>Environment Variable</string>
+			<key>match</key>
+			<string>\$[A-Za-z][A-Za-z0-9_]+</string>
+			<key>name</key>
+			<string>variable.other.environment.autosys</string>
+		</dict>
 	</array>
 	<key>scopeName</key>
 	<string>source.autosys</string>
