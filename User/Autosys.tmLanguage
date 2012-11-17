@@ -14,17 +14,117 @@
 			<key>comment</key>
 			<string>Comment block</string>
 			<key>match</key>
-			<string>/\*.*\*/\s?$\n?</string>
+			<string>/\*.*\*/\s*$\n?</string>
 			<key>name</key>
 			<string>comment.block.autosys</string>
 		</dict>
 		<dict>
 			<key>comment</key>
-			<string>Environment Variable</string>
+			<string>Box or Job identification</string>
 			<key>match</key>
-			<string>\$[A-Za-z][A-Za-z0-9_]+</string>
+			<string>(?:box_name):</string>
 			<key>name</key>
-			<string>variable.other.environment.autosys</string>
+			<string>keyword.control.autosys</string>
+		</dict>
+		<dict>
+			<key>captures</key>
+			<dict>
+				<key>1</key>
+				<dict>
+					<key>name</key>
+					<string>keyword.control.autosys</string>
+				</dict>
+				<key>2</key>
+				<dict>
+					<key>name</key>
+					<string>entity.name.section.autosys</string>
+				</dict>
+				<key>3</key>
+				<dict>
+					<key>name</key>
+					<string>storage.type.autosys</string>
+				</dict>
+				<key>4</key>
+				<dict>
+					<key>name</key>
+					<string>entity.name.section.autosys</string>
+				</dict>
+			</dict>
+			<key>comment</key>
+			<string>Box flow controls</string>
+			<key>match</key>
+			<string>^\s*((?:delete_box|insert_job|update_job):)\s*([A-Za-z0-9_]*)*(\$S)([A-Za-z0-9_]*)</string>
+			<key>name</key>
+			<string>meta.box.control.autosys</string>
+		</dict>
+		<dict>
+			<key>captures</key>
+			<dict>
+				<key>1</key>
+				<dict>
+					<key>name</key>
+					<string>keyword.control.autosys</string>
+				</dict>
+				<key>3</key>
+				<dict>
+					<key>name</key>
+					<string>support.class.jobname.autosys</string>
+				</dict>
+			</dict>
+			<key>comment</key>
+			<string>What does this box run?</string>
+			<key>match</key>
+			<string>^\s*(command:)\s*(autojob\.sh)\s+([A-Za-z0-9_]*)</string>
+			<key>name</key>
+			<string>meta.command.autosys</string>
+		</dict>
+		<dict>
+			<key>captures</key>
+			<dict>
+				<key>1</key>
+				<dict>
+					<key>name</key>
+					<string>keyword.control.autosys</string>
+				</dict>
+				<key>2</key>
+				<dict>
+					<key>name</key>
+					<string>storage.type.autosys</string>
+				</dict>
+			</dict>
+			<key>comment</key>
+			<string>What kind of box is this?</string>
+			<key>match</key>
+			<string>(job_type:)\s*([bc])</string>
+			<key>name</key>
+			<string>meta.box.type.autosys</string>
+		</dict>
+		<dict>
+			<key>captures</key>
+			<dict>
+				<key>1</key>
+				<dict>
+					<key>name</key>
+					<string>keyword.control.autosys</string>
+				</dict>
+				<key>2</key>
+				<dict>
+					<key>name</key>
+					<string>constant.language.autosys</string>
+				</dict>
+			</dict>
+			<key>match</key>
+			<string>(permission:)\s*((?:[gmw][xe],?\s*)+)</string>
+			<key>name</key>
+			<string>meta.attribute.permission.autosys</string>
+		</dict>
+		<dict>
+			<key>comment</key>
+			<string>Generic Keywords that don't have specified parameters</string>
+			<key>match</key>
+			<string>(?:date_conditions|run_calendar|start_times|condition|alarm_if_fail|machine|description):</string>
+			<key>name</key>
+			<string>keyword.control.autosys</string>
 		</dict>
 	</array>
 	<key>scopeName</key>

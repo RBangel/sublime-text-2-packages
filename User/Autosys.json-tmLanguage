@@ -4,13 +4,55 @@
   "patterns": [
   { 
     "name": "comment.block.autosys",
-    "match": "/\\*.*\\*/\\s?$\\n?",
+    "match": "/\\*.*\\*/\\s*$\\n?",
     "comment": "Comment block"
   },
   {
-    "name": "variable.other.environment.autosys",
-    "match": "\\$[A-Za-z][A-Za-z0-9_]+",
-    "comment": "Environment Variable"
+    "name": "keyword.control.autosys",
+    "match": "(?:box_name):",
+    "comment": "Box or Job identification"
+  },
+  {
+    "name": "meta.box.control.autosys",
+    "match": "^\\s*((?:delete_box|insert_job|update_job):)\\s*([A-Za-z0-9_]*)*(\\$S)([A-Za-z0-9_]*)",
+    "captures": {
+      "1": { "name": "keyword.control.autosys" },
+      "2": { "name": "entity.name.section.autosys"},
+      "3": { "name": "storage.type.autosys" },
+      "4": { "name": "entity.name.section.autosys"}
+    },
+    "comment": "Box flow controls"
+  },
+  {
+    "name": "meta.command.autosys",
+    "match": "^\\s*(command:)\\s*(autojob\\.sh)\\s+([A-Za-z0-9_]*)",
+    "captures": {
+      "1": { "name": "keyword.control.autosys" },
+      "3": { "name": "support.class.jobname.autosys"}
+    },
+    "comment": "What does this box run?"  
+  },
+  {
+    "name": "meta.box.type.autosys",
+    "match": "(job_type:)\\s*([bc])",
+    "captures": {
+      "1": { "name": "keyword.control.autosys" },
+      "2": { "name": "storage.type.autosys"}
+    },
+    "comment": "What kind of box is this?"
+  },
+  {
+    "name": "meta.attribute.permission.autosys",
+    "match": "(permission:)\\s*((?:[gmw][xe],?\\s*)+)",
+    "captures": {
+      "1": { "name": "keyword.control.autosys" },
+      "2": { "name": "constant.language.autosys"}
+    }
+  },
+  {
+    "name": "keyword.control.autosys",
+    "match": "(?:date_conditions|run_calendar|start_times|condition|alarm_if_fail|machine|description):",
+    "comment": "Generic Keywords that don't have specified parameters"
   }
   ],
   "uuid": "4cd28efc-83c1-4a3e-b9ab-5bbda5eaa863"
