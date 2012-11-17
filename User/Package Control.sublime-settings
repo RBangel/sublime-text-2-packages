@@ -1,0 +1,11 @@
+{
+	"auto_upgrade_last_run": 1353000853,
+	"installed_packages":
+	[
+		"AAAPackageDev",
+		"LiveReload",
+		"Markdown Preview",
+		"Package Control",
+		"SFTP"
+	]
+}

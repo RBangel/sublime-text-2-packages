@@ -1,0 +1,12 @@
+{
+    // Determines what character(s) are used to terminate each line in new files.
+    // Valid values are 'system' (whatever the OS uses), 'windows' (CRLF) and
+    // 'unix' (LF only).
+    "default_line_ending": "unix",
+
+	"color_scheme": "Packages/Color Scheme - Default/Monokai.tmTheme",
+	"draw_white_space": "selection",
+	"ensure_newline_at_eof_on_save": false,
+	"font_size": 12,
+	"translate_tabs_to_spaces": true
+}
