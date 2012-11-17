@@ -1,0 +1,12 @@
+{ "name": "Autosys",
+  "scopeName": "source.autosys",
+  "fileTypes": ["jil"],
+  "patterns": [
+  { 
+    "name": "comment.block.autosys",
+    "match": "/\\*.*\\*/\\s?$\\n?",
+    "comment": "Comment block"
+  }
+  ],
+  "uuid": "4cd28efc-83c1-4a3e-b9ab-5bbda5eaa863"
+}

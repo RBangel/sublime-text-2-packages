@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple Computer//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>fileTypes</key>
+	<array>
+		<string>jil</string>
+	</array>
+	<key>name</key>
+	<string>Autosys</string>
+	<key>patterns</key>
+	<array>
+		<dict>
+			<key>comment</key>
+			<string>Comment block</string>
+			<key>match</key>
+			<string>/\*.*\*/\s?$\n?</string>
+			<key>name</key>
+			<string>comment.block.autosys</string>
+		</dict>
+	</array>
+	<key>scopeName</key>
+	<string>source.autosys</string>
+	<key>uuid</key>
+	<string>4cd28efc-83c1-4a3e-b9ab-5bbda5eaa863</string>
+</dict>
+</plist>
